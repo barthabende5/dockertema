@@ -1,0 +1,68 @@
+.search-wrap {
+  max-width: 840px;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  font-family: Inter, system-ui, Arial, sans-serif;
+}
+
+.controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  flex: 1 1 auto;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.clear {
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  border: none;
+  background: #e0e0e0;
+  cursor: pointer;
+}
+
+.loading {
+  color: #666;
+}
+
+.no-results {
+  color: #a00;
+  font-weight: 600;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.8rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #eee;
+  padding: 0.75rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+
+.card-name {
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.card-row {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 0.15rem 0;
+}
+
+.label {
+  font-weight: 600;
+  color: #666;
+  margin-right: 0.35rem;
+}

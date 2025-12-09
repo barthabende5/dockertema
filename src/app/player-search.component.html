@@ -1,0 +1,28 @@
+<div class="search-wrap">
+  <h2>Focista kereső</h2>
+
+  <div class="controls">
+    <input
+      type="text"
+      placeholder="Írd be a focista nevét..."
+      [(ngModel)]="search"
+      (input)="onSearch()"
+    />
+    <button (click)="clear()" class="clear">Törlés</button>
+  </div>
+
+  <div *ngIf="loading" class="loading">Betöltés…</div>
+
+  <div *ngIf="!loading">
+    <div *ngIf="filtered.length === 0" class="no-results">Nem található játékos.</div>
+
+    <div class="list">
+      <div class="card" *ngFor="let p of filtered">
+        <div class="card-name">{{ p.name }}</div>
+        <div class="card-row"><span class="label">Pozíció:</span> {{ p.position }}</div>
+        <div class="card-row"><span class="label">Életkor:</span> {{ p.age }}</div>
+        <div class="card-row"><span class="label">Csapat:</span> {{ p.team }}</div>
+      </div>
+    </div>
+  </div>
+</div>
